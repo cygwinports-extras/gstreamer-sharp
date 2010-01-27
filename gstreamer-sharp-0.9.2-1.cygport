@@ -1,0 +1,6 @@
+ORIG_PN=${PN}
+inherit mono gstreamer
+
+DESCRIPTION=".NET bindings for GStreamer"
+
+CYGCONF_ARGS="--disable-static"
