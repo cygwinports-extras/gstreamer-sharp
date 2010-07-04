@@ -75,17 +75,6 @@
  
      [DllImport ("libgstreamer-0.10.dll") ]
      private static extern bool gst_init_check (ref int argc, ref IntPtr argv, out IntPtr error);
---- origsrc/gstreamer-sharp-0.9.2/gstreamer-sharp/glue/Makefile.am	2009-09-22 02:03:03.000000000 -0500
-+++ src/gstreamer-sharp-0.9.2/gstreamer-sharp/glue/Makefile.am	2009-12-04 03:10:05.298606600 -0600
-@@ -27,7 +27,7 @@ nodist_libgstreamersharpglue_0_10_la_SOU
- 
- libgstreamersharpglue_0_10_la_LIBADD = $(GST_LIBS)
- 
--libgstreamersharpglue_0_10_la_LDFLAGS = -module -avoid-version -no-undefined
-+libgstreamersharpglue_0_10_la_LDFLAGS = -avoid-version -no-undefined
- libstreamersharpglue.dll: $(libstreamersharpglue_0_10_la_OBJECTS) libstreamersharpglue.rc libstreamersharpglue.def
- 	./build-dll libstreamersharpglue-0.10 $(VERSION)
- 
 --- origsrc/gstreamer-sharp-0.9.2/gstreamer-sharp/gstreamer-sharp.dll.config.in	2009-10-03 04:49:14.000000000 -0500
 +++ src/gstreamer-sharp-0.9.2/gstreamer-sharp/gstreamer-sharp.dll.config.in	2009-12-04 03:05:43.186949600 -0600
 @@ -1,12 +1,12 @@
